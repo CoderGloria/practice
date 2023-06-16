@@ -34,7 +34,7 @@ public class DoublyLinkedListSentinel implements Iterable<Integer>{
             return p;
             }
         }
-
-
+	// 忘了这个
+	return null;
     }
 }
