@@ -1,28 +1,40 @@
-public class DoublyLinkedListSentinel implements Iterable<>(){
+                                                    // 要写泛型,且没有()
+public class DoublyLinkedListSentinel implements Iterable<Integer>{
     static class Node{
         Node pre;
-	      Node next;
-        int value;
+	    Node next;
+        int value;  // 元素值也要declare变量
 	
-	      public Node( Node pre, int value, Node next){}
-		      this.pre = pre;
-		      this.next = next;
-		      this.value = value;
+	public Node( Node pre, int value, Node next){}
+		this.pre = pre;
+		this.next = next;
+		this.value = value;
 	
-	    }
+	}
 
     private Node head;
     private Node tail;
 
     public DoublyLinkedListSentinel(){
-        // Node head = new Node(null, -1, tail)
-        // Node tail = new Node(head, -2, null)
+        // 错: Node head = new Node(null, -1, tail);  Node tail = new Node(head, -2, null);
 
-        
+	    head = new Node(null, -1, null);
+	    tail = new Node(null, -2, null);
+    
         head.next = tail;
         tail.pre = head;
+    }
+    
+    private Node findNode(int index){
+        // 错误: Node pre = index - 1;
+        int i = -1;    
+        // 初始化语句半天想不出来. 不是只有用整数当初始化语句
+        for(Node p = head; p != tail; p = p.next, i++){
+            if(index == i){
+            return p;
+            }
+        }
+
 
     }
-
-
 }
