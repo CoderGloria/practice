@@ -1,0 +1,28 @@
+public class DoublyLinkedListSentinel implements Iterable<>(){
+    static class Node{
+        Node pre;
+	      Node next;
+        int value;
+	
+	      public Node( Node pre, int value, Node next){}
+		      this.pre = pre;
+		      this.next = next;
+		      this.value = value;
+	
+	    }
+
+    private Node head;
+    private Node tail;
+
+    public DoublyLinkedListSentinel(){
+        // Node head = new Node(null, -1, tail)
+        // Node tail = new Node(head, -2, null)
+
+        
+        head.next = tail;
+        tail.pre = head;
+
+    }
+
+
+}
