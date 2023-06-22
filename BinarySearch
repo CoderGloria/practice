@@ -11,6 +11,6 @@ public class BinarySearch{
         return m;
       }
     }
-    return -1;
+    return -1;  //返回的位置要注意, 在while外面啊
   }
 }
