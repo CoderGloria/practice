@@ -1,4 +1,4 @@
-public class ArrayMethods{
+public class DynamicArray{
   private int size = 0;
   private int capacity = 8;
   private int[]array = new int[capacity];
