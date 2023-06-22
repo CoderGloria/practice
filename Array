@@ -1,3 +1,4 @@
+// Take 1 抄写
 public class DynamicArray{
   private int size = 0;
   private int capacity = 8;
@@ -16,3 +17,47 @@ public class DynamicArray{
   }
 
 }
+
+// Take 2 默写
+public class DynamicArray{
+  private int size = 0;
+  private int capacity = 8;
+  private int[]array = new int[capacity];
+
+  public void addLast(int element){
+    add(size, element);
+
+  }
+
+  public void add(int index, int element){
+    if(index>=0 && index < size){
+      System.arraycopy( array, index, array, index + 1, size - index);
+    }
+    array[index] = element;
+  // 这句忘了!
+    size ++;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
